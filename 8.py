@@ -1,6 +1,11 @@
 from util.basic import print_test, get_nums_from_user
 
 
+# import os
+# import sys
+# sys.path.append(os.path.abspath("../util"))
+
+
 def get_smallest(first_num, second_num, third_num):
 
     smallest = first_num
@@ -13,9 +18,9 @@ def get_smallest(first_num, second_num, third_num):
     return smallest
 
 
-nums = get_nums_from_user(3)
-res = get_smallest(*nums)
-print(res)
+# nums = get_nums_from_user(3)
+# res = get_smallest(*nums)
+# print(res)
 
 # Tests
 
@@ -41,4 +46,4 @@ def run_tests():
         print_test(test[0], test[1], test[2])
 
 
-# run_tests()
+run_tests()
