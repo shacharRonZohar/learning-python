@@ -67,7 +67,9 @@ def get_board(size=5):
     for i in range(size):
         board.append([])
         for j in range(size):
-            board[i].append(get_cell((j * i) + randint(0, size+1*size+1)))
+            # just a weird basic calculation to get a random number based on the coords of the cell
+            random_seed = (j * i) + randint(0, size+1*size+1)
+            board[i].append(get_cell(random_seed))
     return board
 
 
@@ -82,8 +84,6 @@ def print_board(board):
 
 
 def get_cell(seed):
-    # return False
-    # return seed % 2 == 0
     return seed < randint(0, seed * 2) and random() > 0.5
 
 

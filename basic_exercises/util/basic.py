@@ -1,20 +1,17 @@
 def print_test(input, expected, actual, title=""):
-    test = ""
+    msg = ""
     if title:
-        test += title + "\n"
-    test += "INPUT: {input}\nEXPECTED: {expected}\nACTUAL: {actual}".format(
+        msg += title + "\n"
+    msg += "INPUT: {input}\nEXPECTED: {expected}\nACTUAL: {actual}".format(
         title=title, input=input, expected=expected, actual=actual)
 
-    print("{title}\nINPUT: {input}\nEXPECTED: {expected}\nACTUAL: {actual}".format(
-        title=title, input=input, expected=expected, actual=actual))
+    print(msg)
 
 
 def check_user_input(input):
     try:
-        # Convert it into integer
         return int(input)
     except ValueError:
-        # Convert it into float
         return float(input)
 
 
